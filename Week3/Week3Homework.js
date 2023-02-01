@@ -6,24 +6,26 @@ function greetCustomer() {
       };
   console.log(message);
 };
-greetCustomer();
 
 function getPizzaOrder(size, crust, ...toppings) {
-  console.log(`${size} ${crust} crust pizza with ${toppings} coming up!`);
-  return size + crust + toppings;
+  console.log(`${size} ${crust} crust pizza with ${toppings}. Coming up!`);
+  return size + ", " + crust + ", " + toppings;
 };
-getPizzaOrder();
 
-function preparePizza(size["small", "medium", "large"], crust["thick", "thin"], toppings["pepperoni", "sausage", "bacon", "extra cheese"]){
-console.log(`...Cooking pizza...`);
-return size[0] crust[1] toppings[0, 1, 2];
-;}
-preparePizza();
+function preparePizza([size, crust, toppings]){
+ console.log(`...your pizza is cooking...`);
+ let pizza = {
+   size: "large",
+   crust: "thin",
+   toppings: "pepperoni, sausage, bacon"
+ };
+ return pizza;
+ };
 
 function servePizza(pizza) {
-  console.log(`Order up! Here's your ${size} ${crust} crust pizza with ${toppings}. Enjoy!`)
-  return pizza
-};
+   console.log(`Order up! Here's your ${pizza['size']} ${pizza['crust']} crust pizza with ${pizza['toppings']}. Enjoy!`)
+   return pizza
+ };
 
-servePizza(preparePizza(getPizzaOrder(pizza)));
+console.log(servePizza(preparePizza(getPizzaOrder("large", "thin", "pepperoni", "sausage", "bacon"))));
 
