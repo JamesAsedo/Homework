@@ -1,4 +1,5 @@
 let pizzaToppings = ["pepperoni", "sausage", "bacon", "extra cheese"];
+
 function greetCustomer() {
   let message = `Welcome to James' Pizza Palace! The toppings we have available are: `;
   for (let topping of pizzaToppings) {
@@ -8,7 +9,7 @@ function greetCustomer() {
 };
 
 function getPizzaOrder(size, crust, ...toppings) {
-  console.log(`${size} ${crust} crust pizza with ${toppings}. Coming up!`);
+  console.log(`One ${size} ${crust} crust pizza with ${toppings}. Coming up!`);
   return size + ", " + crust + ", " + toppings;
 };
 
@@ -27,5 +28,6 @@ function servePizza(pizza) {
    return pizza
  };
 
-console.log(servePizza(preparePizza(getPizzaOrder("large", "thin", "pepperoni", "sausage", "bacon"))));
+greetCustomer();
+servePizza(preparePizza(getPizzaOrder("large", "thin", "pepperoni", "sausage", "bacon")));
 
