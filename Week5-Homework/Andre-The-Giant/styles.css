@@ -1,0 +1,84 @@
+html {
+  background-color: antiquewhite;
+}
+
+body {
+  text-align: center;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+img {
+  height: 100%;
+}
+
+div {
+  border: 2px solid burlywood;
+  margin: 10px;
+}
+
+#introPic {
+  float: left;
+}
+
+#bio {
+  float: right;
+}
+#bio > li {
+  padding: 2px;
+}
+
+#pro {
+  width: auto;
+}
+
+
+@media screen and (max-width: 600px){
+    body {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  img {
+    max-width: 50%;
+    max-height: 50%;
+    position: center;
+  }
+
+  div {
+    border: .25px solid burlywood;
+    margin: none;
+    overflow: auto;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  #introPic {
+    float: none;
+  }
+
+  #bio {
+    float: none;
+  }
+  #bio > li {
+    padding: .5px;
+    font-size: 15px;
+  }
+
+  #pro {
+    display: none;
+  }
+}
